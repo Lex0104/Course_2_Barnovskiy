@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "course-2-barnovskiy"
+version = "0.1.0"
+description = ""
+authors = ["Eduard <barned85@gmail.com>"]
+readme = "README.md"
+packages = [{include = "course_2_barnovskiy"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+requests = "^2.32.3"
+
+
+[tool.poetry.group.lint.dependencies]
+flake8 = "^7.1.1"
+mypy = "^1.13.0"
+black = "^24.10.0"
+isort = "^5.13.2"
+data = "^0.4"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.4"
+pytest-cov = "^6.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 119
+exclude = '.git'
+
+[tool.isort]
+line_length = 119
